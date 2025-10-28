@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Profile - Revive Project</title>
+    <link rel="stylesheet" href="profile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navigation -->
+    <nav>
+    <div class="nav-left">
+        <div class="site-name">Revive</div>
+        <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="catalog.html">Catalog</a>
+        <a href="about_us.html">About Us</a>
+        <a href="redesign.html">Redesign</a>
+        </div>
+    </div>
+    <div class="nav-buttons">
+        <a href="signin.html" class="sign-in">Sign In</a>
+        <a href="signup.html" class="sign-up">Sign Up</a>
+        <a href="profile.html" class="profile"></a>
+    </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="profile-container">
+            <img src="pictures/photo_2025-10-20_23-16-54.jpg" alt="Profile Picture" class="profile-img" id="profileImage">
+            
+            <div class="profile-info">
+                <p class="welcome-text">Welcome back,</p>
+                <h1 class="user-name" id="userName">Julie Morgan</h1>
+                <p class="user-tagline" id="userTagline">Reimagining fabrics with creativity and purpose.</p>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email Address</h4>
+                            <p id="userEmail">julie.morgan@example.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p id="userLocation">Lviv, Ukraine</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="Edit_Profile.html" class="edit-profile-btn" id="editProfileBtn">
+                    <i class="fas fa-edit"></i> Edit Profile
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Your Revived Things Section -->
+    <section class="your_container">
+        <h2 class="section-title">Your Revived Things</h2>
+        <p class="section-subtitle">Your creative transformations that gave fabrics a second life.</p>
+        
+        <div class="revived-grid">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <div class="project-actions">
+                    <button class="action-btn" title="Share">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                    <button class="action-btn" title="Edit">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                </div>
+                <img src="pictures/photo_2025-10-20_23-10-03.jpg" alt="Patchwork Denim Jacket" class="project-img">
+                <div class="project-info">
+                    <h3 class="project-title">Patchwork Denim Jacket</h3>
+                    <p class="project-desc">Transformed old jeans into a unique statement piece with floral embroidery.</p>
+                    <p class="project-date">Revived on March 15, 2025</p>
+                </div>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="project-card">
+                <div class="project-actions">
+                    <button class="action-btn" title="Share">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                    <button class="action-btn" title="Edit">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                </div>
+                <img src="pictures/photo_2025-10-20_23-10-00.jpg" alt="Upcycled Linen Dress" class="project-img">
+                <div class="project-info">
+                    <h3 class="project-title">Upcycled Linen Dress</h3>
+                    <p class="project-desc">Created from vintage tablecloths with delicate lace accents.</p>
+                    <p class="project-date">Revived on February 28, 2025</p>
+                </div>
+            </div>
+            
+            <!-- Project 3 -->
+            <div class="project-card">
+                <div class="project-actions">
+                    <button class="action-btn" title="Share">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                    <button class="action-btn" title="Edit">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                </div>
+                <img src="pictures/photo_2025-10-20_23-10-05.jpg" alt="Scrap Fabric Tote" class="project-img">
+                <div class="project-info">
+                    <h3 class="project-title">Scrap Fabric Tote</h3>
+                    <p class="project-desc">Woven from leftover fabric scraps in a colorful geometric pattern.</p>
+                    <p class="project-date">Revived on January 10, 2025</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="btn-container">
+            <button class="add-project-btn" id="addProjectBtn">
+                <i class="fas fa-plus"></i> Add New Project
+            </button>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="achievements-section">
+        <div class="achive-container">
+            <h2 class="section-title">Your Achievements</h2>
+            <p class="section-subtitle">Unlock badges as you create and share your sustainable designs</p>
+            
+            <div class="achievements-grid">
+                <!-- Achievement 1: First Creation -->
+                <div class="achievement-card unlocked" data-achievement-id="1">
+                    <div class="achievement-icon">🥇</div>
+                    <h3 class="achievement-title">First Creation</h3>
+                    <p class="achievement-desc">You created your first revived item! Welcome to the community.</p>
+                    <div class="achievement-progress">
+                        <div class="progress-bar" style="width: 100%"></div>
+                    </div>
+                    <div class="achievement-status">Unlocked</div>
+                </div>
+                
+                <!-- Achievement 2: Revival Champion -->
+                <div class="achievement-card" data-achievement-id="2">
+                    <div class="achievement-icon">🏆</div>
+                    <h3 class="achievement-title">Revival Champion</h3>
+                    <p class="achievement-desc">Successfully revived 5 unique garments from old materials.</p>
+                    <div class="achievement-progress">
+                        <div class="progress-bar" style="width: 60%"></div>
+                    </div>
+                    <div class="achievement-status">3/5 Completed</div>
+                </div>
+                
+                <!-- Achievement 3: Creative Visionary -->
+                <div class="achievement-card unlocked" data-achievement-id="3">
+                    <div class="achievement-icon">⭐</div>
+                    <h3 class="achievement-title">Creative Visionary</h3>
+                    <p class="achievement-desc">Designed 3 completely original pieces from recycled fabric.</p>
+                    <div class="achievement-progress">
+                        <div class="progress-bar" style="width: 100%"></div>
+                    </div>
+                    <div class="achievement-status">Unlocked</div>
+                </div>
+                
+                <!-- Achievement 4: Eco Warrior -->
+                <div class="achievement-card" data-achievement-id="4">
+                    <div class="achievement-icon">🌿</div>
+                    <h3 class="achievement-title">Eco Warrior</h3>
+                    <p class="achievement-desc">Prevented 10kg of textile waste from ending up in landfills.</p>
+                    <div class="achievement-progress">
+                        <div class="progress-bar" style="width: 70%"></div>
+                    </div>
+                    <div class="achievement-status">7/10 kg Saved</div>
+                </div>
+                
+                <!-- Achievement 5: Community Star -->
+                <div class="achievement-card" data-achievement-id="5">
+                    <div class="achievement-icon">👑</div>
+                    <h3 class="achievement-title">Community Star</h3>
+                    <p class="achievement-desc">Shared 5 of your creations with the Revive community.</p>
+                    <div class="achievement-progress">
+                        <div class="progress-bar" style="width: 40%"></div>
+                    </div>
+                    <div class="achievement-status">2/5 Shared</div>
+                </div>
+                
+                <!-- Achievement 6: Master Craftsman -->
+                <div class="achievement-card locked" data-achievement-id="6">
+                    <div class="achievement-icon">💎</div>
+                    <h3 class="achievement-title">Master Craftsman</h3>
+                    <p class="achievement-desc">Created 10 revived items with exceptional craftsmanship.</p>
+                    <div class="achievement-progress">
+                        <div class="progress-bar" style="width: 30%"></div>
+                    </div>
+                    <div class="achievement-status">3/10 Items</div>
+                    <div class="locked-overlay">🔒</div>
+                </div>
+                
+                <!-- Achievement 7: Zero Waste Hero -->
+                <div class="achievement-card" data-achievement-id="7">
+                    <div class="achievement-icon">♻️</div>
+                    <h3 class="achievement-title">Zero Waste Hero</h3>
+                    <p class="achievement-desc">Used 100% of available materials in 5 different projects.</p>
+                    <div class="achievement-progress">
+                        <div class="progress-bar" style="width: 80%"></div>
+                    </div>
+                    <div class="achievement-status">4/5 Projects</div>
+                </div>
+                
+                <!-- Achievement 8: Innovation Leader -->
+                <div class="achievement-card locked" data-achievement-id="8">
+                    <div class="achievement-icon">🎨</div>
+                    <h3 class="achievement-title">Innovation Leader</h3>
+                    <p class="achievement-desc">Developed 3 unique upcycling techniques.</p>
+                    <div class="achievement-progress">
+                        <div class="progress-bar" style="width: 33%"></div>
+                    </div>
+                    <div class="achievement-status">1/3 Techniques</div>
+                    <div class="locked-overlay">🔒</div>
+                </div>
+                
+                <!-- Achievement 9: Collaboration Pro -->
+                <div class="achievement-card unlocked" data-achievement-id="9">
+                    <div class="achievement-icon">🤝</div>
+                    <h3 class="achievement-title">Collaboration Pro</h3>
+                    <p class="achievement-desc">Completed 2 collaborative projects with other creators.</p>
+                    <div class="achievement-progress">
+                        <div class="progress-bar" style="width: 100%"></div>
+                    </div>
+                    <div class="achievement-status">Unlocked</div>
+                </div>
+                
+                <!-- Achievement 10: Revive Legend -->
+                <div class="achievement-card locked" data-achievement-id="10">
+                    <div class="achievement-icon">🌟</div>
+                    <h3 class="achievement-title">Revive Legend</h3>
+                    <p class="achievement-desc">Reached the highest level of sustainable creation mastery.</p>
+                    <div class="achievement-progress">
+                        <div class="progress-bar" style="width: 25%"></div>
+                    </div>
+                    <div class="achievement-status">Keep creating!</div>
+                    <div class="locked-overlay">🔒</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inspiration Ideas Section -->
+    <section class="inspiration">
+        <div class="video-container">
+            <h2 class="section-title">Inspiration Ideas</h2>
+            <p class="section-subtitle">Get inspired by creations from our community members</p>
+            
+            <!-- Video Row -->
+            <div class="video-grid">
+                <!-- Video 1 -->
+                <div class="video-card">
+                    <video class="inspiration-video" src="videos\IMG_9922.MP4" autoplay loop muted playsinline controls></video>
+                </div>
+                
+                <!-- Video 2 -->
+                <div class="video-card">
+                    <video class="inspiration-video" src="videos\IMG_9923.MP4" autoplay loop muted playsinline controls></video>
+                </div>
+                
+                <!-- Video 3 -->
+                <div class="video-card">
+                    <video class="inspiration-video" src="videos\IMG_9924.MP4" autoplay loop muted playsinline controls></video>
+                </div>
+            </div>
+            
+            <!-- Divider Text -->
+            <p class="divider-text">Discover stunning upcycling techniques in action above! Dive into these exclusive videos showcasing creative fabric transformations, then explore more innovative ideas below.</p>
+            
+            <div class="inspiration-grid">
+                <!-- Inspiration 1 -->
+                <div class="inspiration-card">
+                    <img src="pictures/photo_2025-10-20_23-10-01.jpg" alt="Upcycled Sweater" class="inspiration-img">
+                    <div class="inspiration-overlay">
+                        <h3 class="inspiration-title">Upcycled Sweater</h3>
+                        <p class="inspiration-desc">By: Sarah J.</p>
+                    </div>
+                </div>
+                
+                <!-- Inspiration 2 -->
+                <div class="inspiration-card">
+                    <img src="pictures/photo_2025-10-20_23-09-53.jpg" alt="Patchwork Tote" class="inspiration-img">
+                    <div class="inspiration-overlay">
+                        <h3 class="inspiration-title">Patchwork Tote</h3>
+                        <p class="inspiration-desc">By: Maria L.</p>
+                    </div>
+                </div>
+                
+                <!-- Inspiration 3 -->
+                <div class="inspiration-card">
+                    <img src="pictures/photo_2025-10-20_23-09-52.jpg" alt="Linen Dress" class="inspiration-img">
+                    <div class="inspiration-overlay">
+                        <h3 class="inspiration-title">Linen Dress</h3>
+                        <p class="inspiration-desc">By: Chloe R.</p>
+                    </div>
+                </div>
+                
+                <!-- Inspiration 4 -->
+                <div class="inspiration-card">
+                    <img src="pictures/photo_2025-10-20_23-08-17.jpg" alt="Denim Jacket" class="inspiration-img">
+                    <div class="inspiration-overlay">
+                        <h3 class="inspiration-title">Denim Jacket</h3>
+                        <p class="inspiration-desc">By: James T.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="btn-container">
+                <a href="https://www.pinterest.com/search/pins/?q=knitted%20clothes&rs=typed" class="explore-more-btn">
+                    <i class="fas fa-compass"></i> Explore More Ideas
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Motivational Quote & CTA -->
+    <section class="quote-section">
+        <p class="quote">"Every stitch tells a story of renewal and care."</p>
+        <button class="cta-btn">Start Your Design</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Revive Project</h3>
+                <p>Bringing new life to discarded fabrics through creativity and care.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="catalogue.html">Catalogue</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Revive Project. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile | Revive Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Montserrat:wght@500&family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="edit-profile.css">
+</head>
+<body>
+  <!-- Navigation -->
+    <nav>
+    <div class="nav-left">
+        <div class="site-name">Revive</div>
+        <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="catalog.html">Catalog</a>
+        <a href="about_us.html">About Us</a>
+        <a href="redesign.html">Redesign</a>
+        </div>
+    </div>
+    <div class="nav-buttons">
+        <a href="signin.html" class="sign-in">Sign In</a>
+        <a href="signup.html" class="sign-up">Sign Up</a>
+        <a href="profile.html" class="profile"></a>
+    </div>
+    </nav>
+
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="welcome-section">
+            <div class="profile-image-container">
+                <img src="pictures/photo_2025-10-20_23-16-54.jpg" alt="Profile" class="profile-image" id="profile-image">
+                <div class="edit-photo" id="edit-photo-btn">
+                    <i class="fas fa-camera"></i>
+                </div>
+            </div>
+            <div class="profile-info">
+                <p class="welcome-text">Welcome back,</p>
+                <h1 class="profile-name" id="welcome-name">Mary Morgan</h1>
+                <p class="profile-tagline" id="welcome-tagline">Reimagining fabrics with creativity and purpose.</p>
+                
+                <div class="profile-details">
+                    <div class="detail-item">
+                        <span class="detail-label">Email Address</span>
+                        <span class="detail-value" id="welcome-email">marymorgan@example.com</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Location</span>
+                        <span class="detail-value" id="welcome-location">Lviv, Ukraine</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content-card" id="edit-form-section">
+            <h2 class="page-title">Edit Personal Information</h2>
+            <p class="page-subtitle">Update your profile details to keep your creative journey current.</p>
+            
+            <!-- Edit Form -->
+            <form id="profile-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" value="Mary">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" value="Morgan">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <div class="input-wrapper">
+                            <input type="email" id="email" value="marymorgan@example.com">
+                            <span class="verified-badge">
+                                <i class="fas fa-check"></i>
+                                Verified
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" value="+1 (555) 123-4567">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <input type="text" id="location" value="Lviv, Ukraine">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="tagline">Tagline</label>
+                        <input type="text" id="tagline" value="Reimagining fabrics with creativity and purpose.">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="dob">Date of Birth</label>
+                        <div class="input-wrapper">
+                            <input type="text" id="dob" value="March 15, 1990" readonly>
+                            <i class="fas fa-calendar-alt calendar-icon" id="calendar-toggle"></i>
+                            <div class="calendar-container" id="calendar">
+                                <div class="calendar-header">
+                                    <div class="calendar-nav">
+                                        <button id="prev-year" title="Previous Year">
+                                            <i class="fas fa-angle-double-left"></i>
+                                        </button>
+                                        <button id="prev-month" title="Previous Month">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </button>
+                                    </div>
+                                    
+                                    <div class="month-year-selector">
+                                        <select class="month-select" id="month-select">
+                                            <option value="0">January</option>
+                                            <option value="1">February</option>
+                                            <option value="2">March</option>
+                                            <option value="3">April</option>
+                                            <option value="4">May</option>
+                                            <option value="5">June</option>
+                                            <option value="6">July</option>
+                                            <option value="7">August</option>
+                                            <option value="8">September</option>
+                                            <option value="9">October</option>
+                                            <option value="10">November</option>
+                                            <option value="11">December</option>
+                                        </select>
+                                        <select class="year-select" id="year-select">
+                                            <!-- Years will be populated by JavaScript -->
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="calendar-nav">
+                                        <button id="next-month" title="Next Month">
+                                            <i class="fas fa-chevron-right"></i>
+                                        </button>
+                                        <button id="next-year" title="Next Year">
+                                            <i class="fas fa-angle-double-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="calendar-grid" id="calendar-days">
+                                    <!-- Calendar days will be generated by JavaScript -->
+                                </div>
+                                <div class="quick-nav">
+                                    <button class="nav-btn" data-years="-10">-10y</button>
+                                    <button class="nav-btn" data-years="-1">-1y</button>
+                                    <button class="nav-btn today-btn">Today</button>
+                                    <button class="nav-btn" data-years="+1">+1y</button>
+                                    <button class="nav-btn" data-years="+10">+10y</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="address">Address</label>
+                        <input type="text" id="address" value="123 Sustainable Street">
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="about">About Me</label>
+                        <textarea id="about">I'm a sustainable fashion designer passionate about upcycling and giving new life to pre-loved garments. My journey with Revive Project began in 2023, and I've since transformed 8 pieces into unique fashion statements.</textarea>
+                    </div>
+                </div>
+                
+                <div class="button-group">
+                    <button type="button" class="btn btn-outline" id="discard-btn">Discard Changes</button>
+                    <button type="submit" class="btn btn-filled">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Photo Edit Modal -->
+    <div class="modal" id="photo-modal">
+        <div class="modal-content">
+            <h2 class="modal-title">Change Profile Photo</h2>
+            <div class="photo-options">
+                <div class="photo-option" id="upload-photo">
+                    <i class="fas fa-upload"></i>
+                    <div class="photo-option-text">
+                        <div class="photo-option-title">Upload New Photo</div>
+                        <div class="photo-option-desc">Choose a photo from your device</div>
+                    </div>
+                </div>
+                <div class="photo-option" id="remove-photo">
+                    <i class="fas fa-trash"></i>
+                    <div class="photo-option-text">
+                        <div class="photo-option-title">Remove Current Photo</div>
+                        <div class="photo-option-desc">Use default avatar instead</div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-buttons">
+                <button class="modal-btn cancel" id="cancel-photo">Cancel</button>
+                <button class="modal-btn save" id="save-photo" style="display: none;">Save Photo</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Message -->
+    <div class="success-message" id="successMessage">
+        <i class="fas fa-check-circle success-icon"></i>
+        <span>Profile updated successfully!</span>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Revive Project</h3>
+                <p>Bringing new life to discarded fabrics through creativity and care.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="home.html">Home</a>
+                <a href="catalog.html">Catalogue</a>
+                <a href="about_us.html">About Us</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Revive Project. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="edit-profile.js"></script>
+</body>
+</html>

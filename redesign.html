@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Studio | Revive Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Montserrat:wght@500&family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Redesign.css">
+</head>
+<body>
+  <!-- Navigation -->
+    <nav>
+    <div class="nav-left">
+        <div class="site-name">Revive</div>
+        <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="catalog.html">Catalog</a>
+        <a href="about_us.html">About Us</a>
+        </div>
+    </div>
+    <div class="nav-buttons">
+        <a href="signin.html" class="sign-in">Sign In</a>
+        <a href="signup.html" class="sign-up">Sign Up</a>
+        <a href="profile.html" class="profile"></a>
+    </div>
+    </nav>
+
+    <!-- Main Content -->
+<main class="main-content">
+    <h1 class="page-title">Design Your Piece</h1>
+    <p class="page-subtitle">Create your unique upcycled fashion by adding elements and customizing colors</p>
+
+    <!-- Filters Section -->
+    <div class="filters-section">
+        <div class="filters-grid">
+            <div class="filter-group">
+                <label class="filter-label">Material</label>
+                <div class="filter-options" id="material-filters">
+                    <div class="filter-option active" data-material="all">All Materials</div>
+                    <div class="filter-option" data-material="organic-cotton">Organic Cotton</div>
+                    <div class="filter-option" data-material="reclaimed-fabric">Reclaimed Fabric</div>
+                    <div class="filter-option" data-material="sustainable-wool">Sustainable Wool</div>
+                    <div class="filter-option" data-material="recycled">Recycled Materials</div>
+                </div>
+            </div>
+            
+            <div class="filter-group">
+                <label class="filter-label">Price Range</label>
+                <div class="filter-options" id="price-filters">
+                    <div class="filter-option active" data-price="all">All Prices</div>
+                    <div class="filter-option" data-price="under-50">Under $50</div>
+                    <div class="filter-option" data-price="50-100">$50 - $100</div>
+                    <div class="filter-option" data-price="over-100">Over $100</div>
+                </div>
+            </div>
+            
+            <div class="filter-group">
+                <label class="filter-label">Sort By</label>
+                <select class="filter-select" id="sort-select">
+                    <option value="featured">Featured</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="newest">Newest to Oldest</option>
+                    <option value="oldest">Oldest to Newest</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+
+       <!-- Garment Selection -->
+    <div class="garment-selection" id="garment-selection">
+        <div class="garment-item active" data-type="tshirt" data-icon="👕">
+            <span class="garment-icon">👕</span>
+            <span class="garment-name">T-Shirt</span>
+            <button class="gallery-btn" data-type="tshirt">⋯</button>
+        </div>
+        <div class="garment-item" data-type="pants" data-icon="👖">
+            <span class="garment-icon">👖</span>
+            <span class="garment-name">Pants</span>
+            <button class="gallery-btn" data-type="pants">⋯</button>
+        </div>
+        <div class="garment-item" data-type="dress" data-icon="👗">
+            <span class="garment-icon">👗</span>
+            <span class="garment-name">Dress</span>
+            <button class="gallery-btn" data-type="dress">⋯</button>
+        </div>
+        <div class="garment-item" data-type="longsleeve" data-icon="🥼">
+            <span class="garment-icon">🥼</span>
+            <span class="garment-name">Longsleeve</span>
+            <button class="gallery-btn" data-type="longsleeve">⋯</button>
+        </div>
+        <div class="garment-item" data-type="coat" data-icon="🧥">
+            <span class="garment-icon">🧥</span>
+            <span class="garment-name">Coat</span>
+            <button class="gallery-btn" data-type="coat">⋯</button>
+        </div>
+        <div class="garment-item" data-type="shorts" data-icon="🩳">
+            <span class="garment-icon">🩳</span>
+            <span class="garment-name">Shorts</span>
+            <button class="gallery-btn" data-type="shorts">⋯</button>
+        </div>
+        <div class="garment-item" data-type="skirt" data-icon="🎀">
+            <span class="garment-icon">🎀</span>
+            <span class="garment-name">Skirt</span>
+            <button class="gallery-btn" data-type="skirt">⋯</button>
+        </div>
+        <div class="garment-item" data-type="hat" data-icon="🧢">
+            <span class="garment-icon">🧢</span>
+            <span class="garment-name">Hat</span>
+            <button class="gallery-btn" data-type="hat">⋯</button>
+        </div>
+        <div class="garment-item" data-type="accessories" data-icon="💎">
+            <span class="garment-icon">💎</span>
+            <span class="garment-name">Accessories</span>
+            <button class="gallery-btn" data-type="accessories">⋯</button>
+        </div>
+        <div class="garment-item" data-type="upload-photo" data-icon="📷">
+            <span class="garment-icon">📷</span>
+            <span class="garment-name">Upload my photo</span>
+            <input type="file" id="photo-upload" accept="image/*" style="display: none;">
+        </div>
+    </div>
+
+        <!-- Design Studio -->
+        <div class="design-studio">
+            <!-- Ліва панель - Design Elements + Color Palette -->
+            <div class="tools-panel">
+                <h3 class="panel-title">Design Elements</h3>
+                
+                <!-- Knitted Elements Button -->
+                <button class="knitted-btn" id="knitted-btn">
+                    <i class="fas fa-scroll"></i>
+                    Knitted Elements
+                </button>
+                
+                <div class="elements-grid" id="elements-grid">
+                    <div class="element-item" data-type="flower" data-icon="🌸">
+                        <div class="element-icon">🌸</div>
+                        <div class="element-name">Flower</div>
+                    </div>
+                    <div class="element-item" data-type="heart" data-icon="❤️">
+                        <div class="element-icon">❤️</div>
+                        <div class="element-name">Heart</div>
+                    </div>
+                    <div class="element-item" data-type="star" data-icon="⭐">
+                        <div class="element-icon">⭐</div>
+                        <div class="element-name">Star</div>
+                    </div>
+                    <div class="element-item" data-type="patch" data-icon="🧵">
+                        <div class="element-icon">🧵</div>
+                        <div class="element-name">Fabric Patch</div>
+                    </div>
+                    <div class="element-item" data-type="button" data-icon="🔘">
+                        <div class="element-icon">🔘</div>
+                        <div class="element-name">Button</div>
+                    </div>
+                    <div class="element-item" data-type="ribbon" data-icon="🎀">
+                        <div class="element-icon">🎀</div>
+                        <div class="element-name">Ribbon</div>
+                    </div>
+                    <div class="element-item" data-type="lace" data-icon="⚜️">
+                        <div class="element-icon">⚜️</div>
+                        <div class="element-name">Lace</div>
+                    </div>
+                    <div class="element-item" data-type="bead" data-icon="🔴">
+                        <div class="element-icon">🔴</div>
+                        <div class="element-name">Bead</div>
+                    </div>
+                </div>
+
+                <!-- Color Palette -->
+                <h3 class="panel-title">Color Palette</h3>
+                <div class="color-panel">
+                    <div class="color-picker-section">
+                        <input type="color" id="color-picker" value="#1A2940">
+                        <div class="color-info">
+                            <div class="color-hex" id="color-hex-value">#1A2940</div>
+                            <div class="color-label">Current Color</div>
+                        </div>
+                    </div>
+                    
+                    <div class="color-presets-grid">
+                        <div class="color-preset" style="background: #FF0000;" data-color="#FF0000" title="Red"></div>
+                        <div class="color-preset" style="background: #ff8000;" data-color="#FFA500" title="Orange"></div>
+                        <div class="color-preset" style="background: #FFFF00;" data-color="#FFFF00" title="Yellow"></div>
+                        <div class="color-preset" style="background: #00d900;" data-color="#008000" title="Green"></div>
+                        <div class="color-preset" style="background: #008cff;" data-color="#0000FF" title="Blue"></div>
+                        <div class="color-preset" style="background: #0f0082;" data-color="#4B0082" title="Indigo"></div>
+                        <div class="color-preset" style="background: #6500ad;" data-color="#EE82EE" title="Violet"></div>
+                        <div class="color-preset" style="background: #f890ff;" data-color="#964B00" title="Pink"></div>
+                        <div class="color-preset" style="background: #000000;" data-color="#000000" title="Black"></div>
+                        <div class="color-preset" style="background: #343434;" data-color="#808080" title="Gray"></div>
+                        <div class="color-preset" style="background: #c1c1c1;" data-color="#FFC0CB" title="Light gray"></div>
+                        <div class="color-preset" style="background: #FFFFFF; border: 1px solid #E8E8E8;" data-color="#FFFFFF" title="White"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Центр - Design Canvas -->
+            <div class="design-canvas">
+                <div class="canvas-controls">
+                    <button class="control-btn" id="undo-btn" disabled>
+                        <i class="fas fa-undo"></i>
+                        Undo
+                    </button>
+                    <button class="control-btn" id="redo-btn" disabled>
+                        <i class="fas fa-redo"></i>
+                        Redo
+                    </button>
+                </div>
+                <div class="garment-preview" id="garment-preview">
+                    <img src="" alt="Selected garment" class="garment-background" id="garment-background" style="display: none;">
+                    <!-- Design elements will be added here dynamically -->
+                </div>
+                <div class="action-buttons">
+                    <button class="btn btn-outline" id="clear-btn">
+                        <i class="fas fa-trash"></i>
+                        Clear All
+                    </button>
+                    <button class="btn btn-filled" id="upload-btn">
+                        <i class="fas fa-upload"></i>
+                        Upload My Piece
+                    </button>
+                </div>
+            </div>
+
+            <!-- Права панель - Properties -->
+            <div class="properties-panel">
+                <h3 class="panel-title">Element Properties</h3>
+                <div class="property-group">
+                    <label class="property-label">Element Size</label>
+                    <div class="size-controls">
+                        <button class="size-btn" data-size="small">Small</button>
+                        <button class="size-btn active" data-size="medium">Medium</button>
+                        <button class="size-btn" data-size="large">Large</button>
+                    </div>
+                </div>
+                
+                <div class="property-group">
+                    <label class="property-label">Garment Size</label>
+                    <div class="garment-size-controls">
+                        <button class="garment-size-btn" data-garment-size="xxs">XXS</button>
+                        <button class="garment-size-btn" data-garment-size="xs">XS</button>
+                        <button class="garment-size-btn" data-garment-size="s">S</button>
+                        <button class="garment-size-btn active" data-garment-size="m">M</button>
+                        <button class="garment-size-btn" data-garment-size="l">L</button>
+                        <button class="garment-size-btn" data-garment-size="xl">XL</button>
+                        <button class="garment-size-btn" data-garment-size="2xl">2XL</button>
+                        <button class="garment-size-btn" data-garment-size="3xl">3XL</button>
+                        <button class="garment-size-btn" data-garment-size="4xl">4XL</button>
+                    </div>
+                </div>
+                
+                <div class="property-group">
+                    <label class="property-label">Textural Elements</label>
+                    <div class="textural-controls">
+                        <button class="textural-btn" data-texture="cable-braids">Cable Braids</button>
+                        <button class="textural-btn" data-texture="ribbed-panels">Ribbed Panels</button>
+                        <button class="textural-btn" data-texture="honeycomb">Honeycomb</button>
+                        <button class="textural-btn" data-texture="basketweave">Basketweave</button>
+                        <button class="textural-btn" data-texture="wavy">Wavy Patterns</button>
+                        <button class="textural-btn" data-texture="lace-knit">Lace Knit</button>
+                        <button class="textural-btn" data-texture="popcorn">Popcorn Stitch</button>
+                        <button class="textural-btn" data-texture="bobble">Bobble Stitch</button>
+                    </div>
+                </div>
+                
+                <div class="property-group">
+                    <label class="property-label">Current Element</label>
+                    <div class="current-info" id="current-element">
+                        No element selected
+                    </div>
+                </div>
+                
+                <div class="property-group">
+                    <label class="property-label">Current Garment</label>
+                    <div class="current-info" id="current-garment">
+                        T-Shirt
+                    </div>
+                </div>
+                
+                <div class="property-group">
+                    <label class="property-label">Selected Size</label>
+                    <div class="current-info" id="selected-garment-size">
+                        M
+                    </div>
+                </div>
+                
+                <div class="property-group">
+                    <label class="property-label">Selected Texture</label>
+                    <div class="current-info" id="selected-texture">
+                        None
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Gallery Modal -->
+    <div class="modal" id="gallery-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="gallery-title">Select Garment Style</h2>
+                <button class="close-modal" id="close-gallery">&times;</button>
+            </div>
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Gallery items will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Knitted Elements Modal -->
+    <div class="knitted-modal" id="knitted-modal">
+        <div class="knitted-modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Knitted Elements Catalog</h2>
+                <button class="close-modal" id="close-knitted">&times;</button>
+            </div>
+            <div class="knitted-categories" id="knitted-categories">
+                <!-- Categories will be populated by JavaScript -->
+            </div>
+            <div class="knitted-grid" id="knitted-grid">
+                <!-- Knitted elements will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Message -->
+    <div class="success-message" id="successMessage">
+        <i class="fas fa-check-circle success-icon"></i>
+        <span>Design uploaded successfully!</span>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Revive Project</h3>
+          <p>Bringing new life to discarded fabrics through creativity and care.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <a href="#">Home</a>
+          <a href="#">Catalogue</a>
+          <a href="#">About Us</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">Twitter</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 Revive Project. All rights reserved.</p>
+      </div>
+    </footer>
+
+
+    <script src="Redesign.js"></script>
+</body>
+</html>

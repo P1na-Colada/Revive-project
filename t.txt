@@ -1,0 +1,22 @@
+:root {
+  --navy: #1A2940;
+  --white: #ffffff;
+  --white_gray: #f8f9fa;
+  --gray: #f0f0f0;
+  --dark_gray: #333;
+  --black: #000000;
+  --blue: #6686AC;
+  --radius: 16px;
+  --shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+:root {
+  --navy: #1A2940;
+  --white: #ffffff;
+  --gray: #f8f9fa;
+  --light_gray: #333;
+  --black: #000000;
+  --blue: #6686AC;
+  --radius: 16px;
+  --shadow: 0 4px 12px rgba(0,0,0,0.08);
+}

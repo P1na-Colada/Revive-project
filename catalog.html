@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Revive Project</title>
+  <link rel="stylesheet" href="catalog.css" />
+    <style>
+    /* Додаткові стилі для коректного відображення зображень */
+    .product-image {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-left">
+      <div class="site-name">Revive</div>
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="about_us.html">About Us</a>
+        <a href="redesign.html">Redesign</a>
+      </div>
+    </div>
+    <div class="nav-buttons">
+      <a href="signin.html" class="sign-in">Sign In</a>
+      <a href="signup.html" class="sign-up">Sign Up</a>
+      <a href="profile.html" class="profile"></a>
+    </div>
+  </nav>
+
+  <!-- Catalog Content -->
+  <div class="catalog-container">
+    <div class="catalog-header">
+      <h1 class="catalog-title">Sustainable Fashion</h1>
+      <p class="catalog-subtitle">Discover our eco-friendly clothing collection made from reclaimed materials</p>
+    </div>
+
+    <div class="filter-section">
+      <h3 class="filter-title">Filter by:</h3>
+      <div class="filter-options">
+        <div class="filter-item">
+          <label for="category">Category</label>
+          <select id="category">
+            <option value="all">All Categories</option>
+            <option value="t-shirt">T-shirts</option>
+            <option value="pans">Pans</option>
+            <option value="dresses">Dresses</option>
+            <option value="longsleeve">Longsleeves</option>
+            <option value="coat">Coat</option>
+            <option value="shorts">Shorts</option>
+            <option value="skirts">Skirts</option>
+            <option value="hat">Hat</option>
+            <option value="accessories">Accessories</option>
+          </select>
+        </div>
+        <div class="filter-item">
+          <label for="size">Size</label>
+          <select id="size">
+            <option value="all">All Sizes</option>
+            <option value="xs">XS</option>
+            <option value="s">S</option>
+            <option value="m">M</option>
+            <option value="l">L</option>
+            <option value="xl">XL</option>
+            <option value="2xl">2XL</option>
+            <option value="3xl">3XL</option>
+            <option value="4xl">4XL</option>
+          </select>
+        </div>
+        <div class="filter-item">
+          <label for="material">Material</label>
+          <select id="material">
+            <option value="all">All Materials</option>
+            <option value="organic">Organic Cotton</option>
+            <option value="reclaimed">Reclaimed Fabric</option>
+            <option value="sustainable">Sustainable Wool</option>
+            <option value="recycled">Recycled Materials</option>
+          </select>
+        </div>
+        <div class="filter-item">
+          <label for="price">Price</label>
+          <select id="price">
+            <option value="all">All Prices</option>
+            <option value="low">Under $50</option>
+            <option value="medium">$50 - $100</option>
+            <option value="high">Over $100</option>
+          </select>
+        </div>
+        <div class="filter-item">
+          <label for="sort">Sort</label>
+          <select id="sort">
+            <option value="featured">Featured</option>
+            <option value="low-high">Price: Low to High</option>
+            <option value="high-low">Price: High to Low</option>
+            <option value="newest">Newest</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Products Grid - Will be populated by JavaScript -->
+    <div class="products-grid" id="products-grid">
+      <!-- Products will be dynamically inserted here -->
+    </div>
+  </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Revive Project</h3>
+          <p>Bringing new life to discarded fabrics through creativity and care.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <a href="#">Home</a>
+          <a href="#">Catalogue</a>
+          <a href="#">About Us</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">Twitter</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 Revive Project. All rights reserved.</p>
+      </div>
+    </footer>
+
+  <script src="catalog.js"></script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+:root {
+  --navy: #1A2940;
+  --white: #ffffff;
+  --white_gray: #f8f9fa;
+  --gray: #f0f0f0;
+  --dark_gray: #333;
+  --black: #000000;
+  --blue: #6686AC;
+  --radius: 16px;
+  --shadow: 0 4px 12px rgba(0,0,0,0.08);
+  --section-gap: 40px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    background: var(--white_gray);
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    width: 900px;
+    height: 600px;
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.welcome-section {
+    flex: 1;
+    background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+    color: var(--white);
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.welcome-section h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.welcome-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.app-name {
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.back-home {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.back-home a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s;
+}
+
+.back-home a:hover {
+    opacity: 0.8;
+}
+
+.signup-section {
+    flex: 1;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.signup-content {
+    padding: 50px;
+    height: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Custom scrollbar for signup content */
+.signup-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.signup-content::-webkit-scrollbar-track {
+    background: var(--gray);
+    border-radius: 3px;
+}
+
+.signup-content::-webkit-scrollbar-thumb {
+    background: var(--blue);
+    border-radius: 3px;
+}
+
+.signup-content::-webkit-scrollbar-thumb:hover {
+    background: var(--navy);
+}
+
+.signup-content h2 {
+    font-size: 28px;
+    color: var(--dark_gray);
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--dark_gray);
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--white_gray);
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.form-group input:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 2px rgba(102, 134, 172, 0.2);
+    outline: none;
+}
+
+.terms {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    gap: 10px;
+}
+
+.terms input {
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.terms label {
+    font-size: 14px;
+    color: var(--dark_gray);
+    line-height: 1.4;
+}
+
+.terms a {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
+
+.signup-btn {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+    color: var(--white);
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.signup-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(14, 22, 58, 0.4);
+}
+
+.signin-link {
+    text-align: center;
+    color: var(--dark_gray);
+    margin-top: auto;
+    padding-top: 20px;
+}
+
+.signin-link a {
+    color: var(--blue);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.signin-link a:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+        max-height: 90vh;
+        width: 100%;
+    }
+    
+    .welcome-section, .signup-section {
+        padding: 0;
+    }
+    
+    .welcome-section {
+        padding: 30px;
+        flex: 0 0 auto;
+    }
+    
+    .signup-content {
+        padding: 30px;
+        max-height: 60vh;
+    }
+    
+    .back-home {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-height: 700px) {
+    .container {
+        height: 95vh;
+    }
+    
+    .signup-content {
+        padding: 40px 50px;
+    }
+}

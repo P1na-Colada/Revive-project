@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revive - Product Name</title>
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+  <!-- Navigation -->
+    <nav>
+    <div class="nav-left">
+        <div class="site-name">Revive</div>
+        <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="catalog.html">Catalog</a>
+        <a href="about_us.html">About Us</a>
+        <a href="redesign.html">Redesign</a>
+        </div>
+    </div>
+    <div class="nav-buttons">
+        <a href="signin.html" class="sign-in">Sign In</a>
+        <a href="signup.html" class="sign-up">Sign Up</a>
+        <a href="profile.html" class="profile"></a>
+    </div>
+    </nav>
+
+
+    <!-- Product Section -->
+    <div class="product-container">
+        <div class="product-content">
+            <div class="product-details">
+                <!-- Product Images -->
+                <div class="product-images">
+                    <div class="main-image">
+                        <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Main Product Image" id="mainImage">
+                    </div>
+                    <div class="image-thumbnails">
+                        <div class="thumbnail active" data-image="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80">
+                            <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Thumbnail 1">
+                        </div>
+                        <div class="thumbnail" data-image="https://images.unsplash.com/photo-1485231183945-fffde7cb39d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80">
+                            <img src="https://images.unsplash.com/photo-1485231183945-fffde7cb39d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Thumbnail 2">
+                        </div>
+                        <div class="thumbnail" data-image="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80">
+                            <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Thumbnail 3">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="product-info">
+                    <h1>Revived Denim Jacket</h1>
+                    <div class="product-price">$45.00</div>
+                    <div class="product-rating">
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+                        <span class="rating-text">(4.8 • 124 reviews)</span>
+                    </div>
+                    
+                    <div class="product-description">
+                        <p>This unique denim jacket has been carefully upcycled from vintage materials and features beautiful hand-embroidered designs. Each piece is one-of-a-kind, created with sustainable practices and attention to detail.</p>
+                        
+                        <div class="product-features">
+                            <h3>Features:</h3>
+                            <ul>
+                                <li>Made from 100% recycled denim</li>
+                                <li>Hand-embroidered unique patterns</li>
+                                <li>Eco-friendly dyes and materials</li>
+                                <li>One-of-a-kind piece</li>
+                                <li>Machine washable</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="size-selection">
+                        <label for="size">Size:</label>
+                        <select id="size" class="size-select">
+                            <option value="">Select Size</option>
+                            <option value="S">Small</option>
+                            <option value="M">Medium</option>
+                            <option value="L">Large</option>
+                            <option value="XL">X-Large</option>
+                        </select>
+                    </div>
+
+                    <div class="quantity-selection">
+                        <label for="quantity">Quantity:</label>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn" id="decreaseQty">-</button>
+                            <input type="number" id="quantity" value="1" min="1" max="10">
+                            <button class="quantity-btn" id="increaseQty">+</button>
+                        </div>
+                    </div>
+
+                    <div class="product-actions">
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                        <button class="buy-now-btn">Buy Now</button>
+                    </div>
+
+                    <div class="product-meta">
+                        <div class="meta-item">
+                            <strong>Category:</strong> Jackets
+                        </div>
+                        <div class="meta-item">
+                            <strong>Material:</strong> Recycled Denim
+                        </div>
+                        <div class="meta-item">
+                            <strong>SKU:</strong> RV-DJ-001
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Tabs -->
+            <div class="product-tabs">
+                <div class="tab-headers">
+                    <button class="tab-header active" data-tab="description">Description</button>
+                    <button class="tab-header" data-tab="details">Details</button>
+                    <button class="tab-header" data-tab="reviews">Reviews</button>
+                    <button class="tab-header" data-tab="shipping">Shipping</button>
+                </div>
+                
+                <div class="tab-content">
+                    <div class="tab-pane active" id="description">
+                        <h3>About This Product</h3>
+                        <p>Our Revived Denim Jacket represents the heart of what we do at Revive Project. Each jacket is carefully selected from vintage collections and transformed into a unique piece of wearable art.</p>
+                        <p>The embroidery patterns are inspired by nature and traditional craftsmanship, making each jacket a story of sustainability and creativity.</p>
+                    </div>
+                    
+                    <div class="tab-pane" id="details">
+                        <h3>Product Details</h3>
+                        <ul>
+                            <li><strong>Material:</strong> 100% Recycled Cotton Denim</li>
+                            <li><strong>Care:</strong> Machine wash cold, tumble dry low</li>
+                            <li><strong>Origin:</strong> Handcrafted in our local workshop</li>
+                            <li><strong>Weight:</strong> 1.2 kg</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tab-pane" id="reviews">
+                        <h3>Customer Reviews</h3>
+                        <div class="review">
+                            <div class="review-header">
+                                <div class="reviewer">Sarah M.</div>
+                                <div class="review-stars">★★★★★</div>
+                            </div>
+                            <p>"Absolutely love my revived jacket! The quality is amazing and I get compliments everywhere I go."</p>
+                        </div>
+                        <div class="review">
+                            <div class="review-header">
+                                <div class="reviewer">John D.</div>
+                                <div class="review-stars">★★★★☆</div>
+                            </div>
+                            <p>"Great fit and the embroidery is beautiful. Love supporting sustainable fashion!"</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="shipping">
+                        <h3>Shipping & Returns</h3>
+                        <p><strong>Free shipping</strong> on orders over $50. Standard delivery: 3-5 business days.</p>
+                        <p><strong>Returns:</strong> Easy 30-day return policy. Items must be in original condition.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Revive Project</h3>
+                <p>Bringing new life to discarded fabrics through creativity and care.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="catalogue.html">Catalogue</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Revive Project. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="product.js"></script>
+</body>
+</html>
